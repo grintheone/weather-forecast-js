@@ -1,0 +1,1 @@
+This project focuses on building a website that displays weather in any requested region/city.
