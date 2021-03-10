@@ -16,5 +16,8 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.23.0",
     "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "luxon": "^1.26.0"
   }
 }

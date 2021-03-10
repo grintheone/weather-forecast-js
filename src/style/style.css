@@ -1,0 +1,57 @@
+p {
+    margin: 0;
+}
+.card {
+    min-width: 110px;
+}
+
+.hourly {
+    overflow-x: scroll; 
+}
+.chartWrapper {
+    position: relative;
+    overflow: auto;
+}
+.chartWrapper > canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;  
+}
+.chartAreaWrapper {
+    overflow-x: scroll;
+    width: 1500px;
+}
+
+table {
+    text-align: center;
+    color: whitesmoke !important;
+}
+#min-max-temp {
+    text-align: right;
+}
+
+#main-weather-icon {
+    font-size: calc(3vw + 3vh + 2vmin) !important;
+}
+
+.card {
+    background-color: transparent;
+    border: none; 
+}
+
+/* Themes for different whether conditions */
+.dark-theme {
+
+    background: #4568dc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4568dc, #b06ab3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4568dc, #b06ab3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+
+tbody {
+    border-color: black !important;
+}
+
+body {
+    color: whitesmoke !important;
+}
