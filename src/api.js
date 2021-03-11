@@ -1,8 +1,9 @@
 import {weatherModule} from './modules.js'
 
+
 async function getCurrentData(city) {
     const id = 'e3496c6b36dcdfcc1b4f8ac7e4da9e33'
-    const url = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${id}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${id}`
     const response = await fetch(url);
     if (response.status != 200) {
         return Promise.reject('City not found')
@@ -26,6 +27,7 @@ async function getMoreData(lon, lat) {
         return weatherData
     }
 }
+
 
 
 export {getCurrentData}
