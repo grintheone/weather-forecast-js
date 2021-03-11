@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 import {buildChart} from './hourlyChart.js'
-import {getCurrentData} from './api.js'
+import {getGeo} from './api.js'
 
 
 const weatherModule = (() => {
@@ -24,7 +24,7 @@ const weatherModule = (() => {
             fahrenheit = false;
         }
         const city = document.getElementById('current-city').textContent;
-        const data = getCurrentData(city)
+        const data = getGeo(city)
         data.then(response => {
             displayData(response)
         }).catch(err => {

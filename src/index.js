@@ -1,5 +1,5 @@
 import './style/style.css'
-import {getCurrentData} from './api.js'
+import {getGeo, handleNotFound} from './api.js'
 import {weatherModule} from './modules.js'
 
 document.getElementById("navbarSearch").addEventListener('submit', formListener)
@@ -17,22 +17,24 @@ function formListener(e) {
         city = input[1].value
     }
     
-    const data = getCurrentData(city)
+    const data = getGeo(city)
     data.then(response => {
         weatherModule.displayData(response)
         e.target.reset();
     }).catch(err => {
         console.log(err);
+        handleNotFound();
         e.target.reset()
     })
 }
 
 
-const data = getCurrentData('Moscow')
+const data = getGeo('Moscow')
     data.then(response => {
         weatherModule.displayData(response, 'Moscow')
     }).catch(err => {
         console.log(err);
+        handleNotFound();
     })
    
 
