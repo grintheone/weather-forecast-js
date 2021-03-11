@@ -26,7 +26,10 @@ p {
 table {
     text-align: center;
     color: whitesmoke !important;
-    border-color: whitesmoke !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+th {
+    border-color: rgba(0, 0, 0, 0.2) !important;
 }
 #min-max-temp {
     text-align: right;
